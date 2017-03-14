@@ -12,7 +12,9 @@
     <h3>模态弹出窗主体</h3>
 
     <button class="btn btn-primary" type="button">点击我</button>
-    <div class="modal fade" id="mymodal">
+    <p>data-keyboard="true"使用esc建关闭窗口， data-backdrop="static"点击弹出窗口外侧，是否关窗口</p>
+    <div class="modal fade" id="mymodal" data-keyboard="true" data-backdrop="static">
+
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -34,6 +36,7 @@
     <!--/.modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <h4>也可以使用data-toggle与data-target替换</h4>
     <script>
         $(function() {
             $(".btn").click(function() {
