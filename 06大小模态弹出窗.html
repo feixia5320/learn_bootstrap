@@ -39,7 +39,7 @@
 小的模态弹出窗
 </button>
 
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div id = 'test' class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -64,8 +64,20 @@
             $(".btn").click(function() {
                 $("#mymodal").modal("toggle");
             });
+
+            $('#myModal').on('hidden.bs.modal', function (e) {
+              // do something...
+              show.bs.modal show 方法调用之后立即触发该事件。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget 属性进行访问。
+                shown.bs.modal  此事件在模态框已经显示出来（并且同时在 CSS 过渡效果完成）之后被触发。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget 属性进行访问。
+                hide.bs.modal   hide 方法调用之后立即触发该事件。
+                hidden.bs.modal 此事件在模态框被隐藏（并且同时在 CSS 过渡效果完成）之后被触发。
+                loaded.bs.modal
+            })
         });
     </script>-->
+    <script>
+        $('#test').modal('show')
+    </script>
 </body>
 
 </html>
